@@ -15,7 +15,15 @@ class ImgAugment:
 
     def show_random_img(self):
         pass
-    
+
+    def get_active_augmentation(self):
+        return self.active_augmentation
+
+    def save_images(self, images, path):
+        for i, img in enumerate(images):
+            print(self.filenames[i])
+            cv2.imwrite(os.path.join(path, f"{self.filenames[i]}.jpg"), img)
+
     def load_images(self, path):
         images = []
         for file in os.listdir(path):
@@ -93,12 +101,12 @@ class ImgAugment:
             ),
             iaa.SomeOf((2, 4), [
                 iaa.Multiply((0.8, 1.2)),             # brightness
-                iaa.LinearContrast((0.8, 1.3)),       # contrast variation
+                iaa.LinearContrast((0.4, 1.8)),       # contrast variation
                 iaa.AddToHueAndSaturation((-8, 8)),   # subtle colour temperature change
                 iaa.GaussianBlur(sigma=(0, 1.0)),     # mild blur
                 iaa.AdditiveGaussianNoise(scale=(0, 0.02*255)),  # noise
                 iaa.JpegCompression(compression=(70, 95)),       # camera compression
-                iaa.Dropout((0.0, 0.03)),             # tiny pixel-level dropout
+                iaa.Dropout((0.0, 0.04)),             # tiny pixel-level dropout
             ], random_order=True)
         ])
         
