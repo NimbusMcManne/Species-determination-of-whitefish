@@ -1,0 +1,19 @@
+name: fish_classification
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pytorch=2.5.1
+  - torchvision=0.20.1
+  - numpy
+  - pandas
+  - tqdm
+  - matplotlib
+  - scikit-learn
+  - seaborn
+  - torchmetrics
+  - pip
+  - pip:
+      - kaggle
