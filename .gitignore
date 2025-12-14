@@ -5,6 +5,7 @@ __pycache__/
 
 augmented_images/
 non-augmented_images/
+training/content/
 # C extensions
 *.so
 
