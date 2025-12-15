@@ -5,3 +5,5 @@ To run augmentation switch to augment branch, activate virtual environment and r
 
 ``
 python -m main --n_images "int"``
+
+where "int" is an integer number that specifies how many augmented images is created. If there are less images than number of augmentations then it re-augments images until "n_images" is met.
