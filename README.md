@@ -4,4 +4,4 @@ A project that aims to differentiate two whitefish (Coregonus maraena and Corego
 To run augmentation switch to augment branch, activate virtual environment and run:
 ´´´
 python -m main --n_images "int"
-´´
+´´´
