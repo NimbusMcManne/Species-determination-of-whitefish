@@ -3,6 +3,9 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+augmented_images/
+non-augmented_images/
+training/content/
 # C extensions
 *.so
 
